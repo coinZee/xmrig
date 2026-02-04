@@ -1,0 +1,12 @@
+/home/coinz/codyn/xmrig/b2/CMakeFiles/xmrig-asm.dir
+/home/coinz/codyn/xmrig/b2/CMakeFiles/xmrig-notls.dir
+/home/coinz/codyn/xmrig/b2/CMakeFiles/edit_cache.dir
+/home/coinz/codyn/xmrig/b2/CMakeFiles/rebuild_cache.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2-sse2.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2-ssse3.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2-xop.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2-avx2.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2-avx512f.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/argon2.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/edit_cache.dir
+/home/coinz/codyn/xmrig/b2/src/3rdparty/argon2/CMakeFiles/rebuild_cache.dir

@@ -180,7 +180,8 @@ void xmrig::Pools::print() const
     size_t i = 1;
     for (const Pool &pool : m_data) {
         // Log::print(GREEN_BOLD(" * ") WHITE_BOLD("POOL #%-7zu") "%s", i, pool.printableName().c_str());
-        Log::print(GREEN_BOLD(" * ") WHITE_BOLD("POOL #%-7zu") "%s", i, pool.printableName().c_str());
+        // Log::print(GREEN_BOLD(" * ") WHITE_BOLD("POOL #%-7zu") "%s", i, pool.printableName().c_str());
+        // LOG::print("pool".c_str());
 
         i++;
     }

